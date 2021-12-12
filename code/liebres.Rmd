@@ -1,0 +1,78 @@
+---
+# author: "Fernando Mateos-González"
+date: Last update "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    code_folding: hide
+    code_download: true
+    toc: yes
+    toc_float:
+      collapsed: no
+      smooth_scroll: no
+  md_document:
+    variant: markdown_github
+  pdf_document:
+    toc: yes
+title: "Liebres Checas"
+
+
+# title: "Liebres Checas"
+# author: "Fernando Mateos-González"
+# date: "`r format(Sys.time(), '%d %B, %Y')`"
+# output:
+#   word_document:
+#     toc: no
+#     fig_caption: true
+#     reference_docx: styleword.docx
+# 
+#   
+
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding, output_dir = "output") })
+  
+
+---
+
+
+```{r global_options, echo=FALSE}
+knitr::opts_chunk$set(fig.width=6, fig.asp = 0.618, fig.path= here::here("output", "figs") ,
+                      echo=TRUE, warning=FALSE, message=FALSE, cache= FALSE)
+
+
+options(allow_html_in_all_outputs=TRUE)
+```
+
+
+
+
+# Introduction
+
+¿Es posible crear un proyecto científico en un día? Vamos a probar :D
+
+
+https://docs.google.com/spreadsheets/d/1fyOLYZqP93-iLEc2hHpztWF4BIe7RQu0StbF1iFyyk0/edit?usp=sharing
+
+https://www.inaturalist.org/projects/liebres-checas
+
+
+# Library
+
+```{r library}
+# install.packages("pacman")
+# writeLines(pacman::p_lib(), "~/Desktop/list_of_R_packages.csv") # to quickly back up packages
+# remotes::install_github("ThinkR-open/remedy")
+
+pacman::p_load(rio, tidyverse,janitor, here, sf, lubridate, leaflet, ggstatsplot) # just add needed packages to this line and Pacman will install and load them.
+
+
+```
+
+
+# Data
+
+```{r data}
+
+data <- import 
+
+```
+
